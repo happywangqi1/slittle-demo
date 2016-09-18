@@ -13,10 +13,10 @@ export {searchGit};
 
 
 function getJson () {
-  let address = `https://raw.githubusercontent.com/happywangqi1/domedata/master/card.json`
+  let address = `https://raw.githubusercontent.com/happywangqi1/domedata/master/card.json?${Math.random()}`
   return axios.get(address)
     .then((res) => (
-      { getData:res.data  }
+      { getJson:res.data  }
     ))
     .catch(function (error) {
       alert(error);
