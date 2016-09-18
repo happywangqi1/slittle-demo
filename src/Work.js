@@ -13,7 +13,7 @@ let cardData = [
 
 class Work extends React.Component {
   componentDidMount(){
-    grtJson()
+    getJson()
       .then((recData) =>{
         console.log(recData.getJson);
       })
