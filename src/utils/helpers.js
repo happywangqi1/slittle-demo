@@ -9,7 +9,7 @@ function searchGit (add) {
       alert(error);
     });
   }
-export {searchGit};
+
 
 
 function getJson () {
@@ -22,4 +22,15 @@ function getJson () {
       alert(error);
     });
   }
-export {getJson};
+
+  function getMd (add) {
+    let address = `https://raw.githubusercontent.com/happywangqi1/domedata/master/blog/${add}.md`;
+    return axios.get(address)
+      .then((res) => (
+        { getMd:res.data  }
+      ))
+      .catch(function (error) {
+        alert(error);
+      });
+    }
+export { searchGit,getJson,getMd}
